@@ -37,3 +37,21 @@ pipeline {
                 script {
                     echo "Tagging and pushing image to ECR..."
                     sh '''
+                        docker tag $ECR_REPO:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$ECR_REPO:$IMAGE_TAG
+                        docker push $AWS_ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$ECR_REPO:$IMAGE_TAG
+                    '''
+                }
+            }
+        }
+    }
+
+    // === Post Actions ===
+    post {
+        success {
+            echo "✅ Build and push successful! Image tag: $IMAGE_TAG"
+        }
+        failure {
+            echo "❌ Build failed! Please check logs."
+        }
+    }
+}
