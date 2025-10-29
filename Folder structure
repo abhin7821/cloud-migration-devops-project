@@ -1,0 +1,7 @@
+app/
+jenkins/
+terraform/
+k8s/
+argo/
+monitoring/
+README.md
