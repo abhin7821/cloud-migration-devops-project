@@ -24,12 +24,15 @@ pipeline {
         // === Stage 2: Login to AWS ECR ===
         stage('Login to AWS ECR') {
             steps {
-                script {
-                    echo "Logging in to AWS ECR..."
-                    sh 'aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com'
-                }
+                withAWS(credentials: 'aws-jenkins-creds', region: "${REGION}") {
+                    script {
+                        echo "Logging in to AWS ECR..."
+                        sh 'aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com'
             }
         }
+    }
+}
+
 
         // === Stage 3: Tag and Push to ECR ===
         stage('Tag & Push to ECR') {
