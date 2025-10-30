@@ -80,7 +80,6 @@ cloud-migration-devops-project/
 | Description | Screenshot |
 |--------------|-------------|
 | Jenkins Build Success | ![Jenkins Build](images/jenkins-build-success.png) |
-| ECR Image | ![ECR Image](images/ecr-image.png) |
 | EKS Deployment | ![EKS Deployment](images/eks-deployment.png) |
 | Application Output | ![App Output](images/app-output.png) |
 
