@@ -20,38 +20,9 @@ This project demonstrates a complete **CI/CD pipeline** that deploys a Python-ba
 
 ---
 
-## 📁 Folder Structure
+<pre> ## 📁 Folder Structure ``` cloud-migration-devops-project/ ├── app/ │ ├── app.py │ ├── requirements.txt │ └── Dockerfile │ ├── jenkins/ │ └── Jenkinsfile │ ├── terraform/ │ ├── main.tf │ ├── provider.tf │ ├── variables.tf │ └── outputs.tf │ ├── k8s/ │ ├── namespace.yaml │ ├── deployment.yaml │ └── service.yaml │ ├── architecture/ │ └── cloud-migration-architecture.png │ ├── images/ │ ├── jenkins-build-success.png │ ├── ecr-image.png │ ├── eks-deployment.png │ └── app-output.png │ └── README.md ``` </pre>
 
-cloud-migration-devops-project/
-├── app/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── Dockerfile
-│
-├── jenkins/
-│   └── Jenkinsfile
-│
-├── terraform/
-│   ├── main.tf
-│   ├── provider.tf
-│   ├── variables.tf
-│   └── outputs.tf
-│
-├── k8s/
-│   ├── namespace.yaml
-│   ├── deployment.yaml
-│   └── service.yaml
-│
-├── architecture/
-│   └── cloud-migration-architecture.png
-│
-├── images/
-│   ├── jenkins-build-success.png
-│   ├── ecr-image.png
-│   ├── eks-deployment.png
-│   └── app-output.png
-│
-└── README.md
+---
 
 ## ⚙️ CI/CD Pipeline Flow
 
