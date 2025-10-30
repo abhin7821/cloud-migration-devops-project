@@ -1,1 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-migration-app
+  namespace: cloud-migration
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cloud-migration-app
+  template:
+    metadata:
+      labels:
+        app: cloud-migration-app
+    spec:
+      containers:
+      - name: cloud-migration-app
+        image: 442122590814.dkr.ecr.us-east-1.amazonaws.com/cloud-migration-app:latest
+        ports:
+        - containerPort: 80
 
