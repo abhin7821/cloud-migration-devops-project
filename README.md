@@ -23,7 +23,6 @@ This project demonstrates a complete **CI/CD pipeline** that deploys a Python-ba
 ## 📁 Folder Structure
 
 cloud-migration-devops-project/
-
 ├── app/
 │ ├── app.py
 │ ├── requirements.txt
@@ -35,7 +34,8 @@ cloud-migration-devops-project/
 ├── terraform/
 │ ├── main.tf
 │ ├── provider.tf
-│ └── variables.tf (optional)
+│ ├── variables.tf
+│ └── outputs.tf
 │
 ├── k8s/
 │ ├── namespace.yaml
@@ -52,7 +52,6 @@ cloud-migration-devops-project/
 │ └── app-output.png
 │
 └── README.md
-
 
 ---
 
