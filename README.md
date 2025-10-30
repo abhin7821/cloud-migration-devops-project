@@ -23,6 +23,7 @@ This project demonstrates a complete **CI/CD pipeline** that deploys a Python-ba
 ## 📁 Folder Structure
 
 cloud-migration-devops-project/
+
 ├── app/
 │ ├── app.py
 │ ├── requirements.txt
